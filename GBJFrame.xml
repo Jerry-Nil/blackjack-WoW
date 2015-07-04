@@ -1,0 +1,134 @@
+﻿<Ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.blizzard.com/wow/ui/">
+	<Frame name="GBJFrame" hidden="true" parent="UIParent" toplevel="true" movable="true" resizable="true" enableMouse="true">
+		<Size>
+			<AbsDimension x="380" y="194" />
+		</Size>
+		<Anchors>
+			<Anchor point="CENTER">
+				<Offset x="-199" y="160" />
+			</Anchor>
+		</Anchors>
+		<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="11" right="12" top="12" bottom="11" />
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="32" />
+			</TileSize>
+			<EdgeSize>
+				<AbsValue val="32" />
+			</EdgeSize>
+		</Backdrop>
+		<Frames>
+			<Button name="BtnInviteGuild" inherits="UIPanelButtonTemplate" text="邀请(公会)">
+				<Size>
+					<AbsDimension x="75" y="25" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="24" y="-25" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>BtnInviteGuild_OnClick();</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="BtnExit" inherits="UIPanelButtonTemplate" text="退出">
+				<Size>
+					<AbsDimension x="75" y="23" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="284" y="-154" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>BtnExit_OnClick();</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="BtnInviteParty" inherits="UIPanelButtonTemplate" text="邀请(小队)">
+				<Size>
+					<AbsDimension x="75" y="25" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="117" y="-25" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>BtnInviteParty_OnClick();</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="BtnInviteRaid" inherits="UIPanelButtonTemplate" text="邀请(团队)">
+				<Size>
+					<AbsDimension x="75" y="25" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="216" y="-25" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>BtnInviteRaid_OnClick();</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="BtnClose" inherits="UIPanelCloseButton" text="">
+				<Size>
+					<AbsDimension x="32" y="32" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="327" y="-25" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>BtnClose_OnClick();</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="BtnStartGame" inherits="UIPanelButtonTemplate" text="开始游戏">
+				<Size>
+					<AbsDimension x="75" y="25" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="24" y="-76" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>BtnStartGame_OnClick();</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="BtnEndGame" inherits="UIPanelButtonTemplate" text="结束游戏">
+				<Size>
+					<AbsDimension x="75" y="25" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="117" y="-76" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>BtnEndGame_OnClick();</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="DEBUG" inherits="UIPanelButtonTemplate" hidden="true" text="DEBUG">
+				<Size>
+					<AbsDimension x="75" y="25" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="216" y="-76" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>Button1_OnClick();</OnClick>
+				</Scripts>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnLoad>self:RegisterForDrag("LeftButton");</OnLoad>
+			<OnDragStart>self:StartMoving();</OnDragStart>
+			<OnDragStop>self:StopMovingOrSizing();</OnDragStop>
+		</Scripts>
+	</Frame>
+</Ui>

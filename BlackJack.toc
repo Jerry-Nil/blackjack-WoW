@@ -1,0 +1,13 @@
+## Interface: 60000
+## Title : BlackJack
+## Notes: BlackJack Game
+## Notes-zhCN: 21点游戏
+## Notes-zhTW: 21點遊戲
+## Author: Jerry
+## Version: 1.0
+
+## X-Email: jerry.hz.china@gmail.com
+## X-Category: Miscellaneous
+
+GBJFrame.xml
+GBJFrame.lua
